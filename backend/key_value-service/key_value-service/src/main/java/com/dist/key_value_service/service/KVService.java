@@ -116,6 +116,9 @@ public class KVService {
         }
 
 
+        cacheService.evict(key);
+
+
         kvRepository.deleteByKey(key);
     }
 
