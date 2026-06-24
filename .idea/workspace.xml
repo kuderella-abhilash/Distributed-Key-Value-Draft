@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cb090b2-bbfc-457e-a15b-f12e5af4186b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/event/ClusterEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/event/KvEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/config/ClusterEventMetricsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/consumer/ClusterEventMetricsConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/consumer/KvEventMetricsConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/consumer/KvEventMetricsConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/controller/MetricsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/controller/MetricsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/repository/MetricRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/repository/MetricRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/service/MetricService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/java/com/dist/metrics_service/service/MetricService.java" afterDir="false" />
-    </list>
+    <list default="true" id="7cb090b2-bbfc-457e-a15b-f12e5af4186b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
