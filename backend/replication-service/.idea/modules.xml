@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Distributed Key-value.iml" filepath="$PROJECT_DIR$/.idea/Distributed Key-value.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/replication-service.iml" filepath="$PROJECT_DIR$/.idea/replication-service.iml" />
     </modules>
   </component>
 </project>
