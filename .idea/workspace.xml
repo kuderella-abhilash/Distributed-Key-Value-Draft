@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cb090b2-bbfc-457e-a15b-f12e5af4186b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/consumer/ReplicationEventConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/consumer/ReplicationEventConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/controller/ReplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/controller/ReplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/entity/ReplicatedKvEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/entity/ReplicatedKvEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/entity/ReplicationLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/entity/ReplicationLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/event/KvEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/event/KvEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/repo/ReplicatedKvRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/repo/ReplicatedKvRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/repo/ReplicationLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/repo/ReplicationLogRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/service/ReplicationLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/service/ReplicationLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/service/ReplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/service/ReplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/ReplicationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/java/com/dist/replication_service/ReplicationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/replication-service/replication-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +69,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ReplicationServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/replication-service&quot;,
@@ -88,6 +84,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
     &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -107,13 +104,14 @@
           <value>
             <map>
               <entry key="ApiGatewayApplication" value="STOPPED" />
+              <entry key="ReplicationServiceApplication" value="FAILED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ReplicationServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.api_gateway.ApiGatewayApplication" />
@@ -179,7 +177,9 @@
       <workItem from="1782149046406" duration="90000" />
       <workItem from="1782284759041" duration="4330000" />
       <workItem from="1782321154504" duration="328000" />
-      <workItem from="1782363546814" duration="4186000" />
+      <workItem from="1782363546814" duration="12744000" />
+      <workItem from="1782386239599" duration="423000" />
+      <workItem from="1782386713615" duration="7908000" />
     </task>
     <servers />
   </component>
@@ -197,7 +197,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/feature/replication-service" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
