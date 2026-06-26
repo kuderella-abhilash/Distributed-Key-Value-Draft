@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Configuration;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString
+@Setter
 public class KVEvent {
     private String operation;
     private String key;
