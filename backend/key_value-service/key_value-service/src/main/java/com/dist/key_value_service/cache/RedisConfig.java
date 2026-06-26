@@ -3,7 +3,6 @@ package com.dist.key_value_service.cache;
 import com.dist.key_value_service.dto.KVResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -34,6 +33,5 @@ public class RedisConfig {
         template.afterPropertiesSet();
 
         return template;
-
     }
 }

@@ -18,7 +18,6 @@ public class KVEventConsumer {
     public void consume(KVEvent event) {
 
         log.info("Received Event");
-
         log.info("Operation : {}", event.getOperation());
         log.info("Key       : {}", event.getKey());
         log.info("Value     : {}", event.getValue());

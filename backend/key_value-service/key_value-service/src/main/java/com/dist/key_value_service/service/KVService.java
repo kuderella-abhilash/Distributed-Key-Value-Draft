@@ -1,6 +1,5 @@
 package com.dist.key_value_service.service;
 
-
 import com.dist.key_value_service.cache.CacheService;
 import com.dist.key_value_service.dto.KVRequest;
 import com.dist.key_value_service.dto.KVResponse;
@@ -21,14 +20,11 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Slf4j
 public class KVService {
-
-
     private final KVEventProducer eventProducer;
     private final KVRepository kvRepository;
     private final CacheService cacheService;
 
     public KVResponse createKeyValue(KVRequest request) {
-
         log.info("Creating key {}", request.getKey());
 
         if (kvRepository.existsByKey(request.getKey())) {
@@ -43,7 +39,6 @@ public class KVService {
                 .build();
 
         KV saved = kvRepository.save(kv);
-
         KVResponse response =
                 mapToResponse(saved);
 
@@ -51,8 +46,8 @@ public class KVService {
                 saved.getKey(),
                 response
         );
-        eventProducer.publish(
 
+        eventProducer.publish(
                 KVEvent.builder()
                         .operation("CREATE")
                         .key(saved.getKey())
@@ -63,23 +58,18 @@ public class KVService {
         );
 
         return response;
-
-
     }
 
     public KVResponse getKeyValue(String key) {
         log.info("Retrieving key {}", key);
 
         Optional<KVResponse> cached = cacheService.get(key);
-
         if (cached.isPresent()) {
-
             log.info("CACHE HIT");
-
             return cached.get();
         }
 
-        System.out.println("CACHE MISS");
+        log.info("CACHE MISS");
 
         KV kv = kvRepository.findByKey(key)
                 .orElseThrow(() ->
@@ -88,7 +78,6 @@ public class KVService {
 
         KVResponse response =
                 mapToResponse(kv);
-
         cacheService.put(key,response);
 
         return response;
@@ -107,7 +96,6 @@ public class KVService {
                         ));
 
         kv.setValue(request.getValue());
-
         kv.setVersion(
                 kv.getVersion() + 1
         );
@@ -131,9 +119,9 @@ public class KVService {
                         .value(updated.getValue())
                         .build()
         );
-
         return response;
     }
+
     @Transactional
     public void deleteByKey(String key) {
 
@@ -142,7 +130,6 @@ public class KVService {
         KV kv =
                 kvRepository.findByKey(key)
                         .orElseThrow(() -> new RuntimeException("Key Not Found"));
-
 
         eventProducer.publish(
 
@@ -153,8 +140,6 @@ public class KVService {
                         .build()
         );
         cacheService.evict(key);
-
-
 
         kvRepository.deleteByKey(key);
     }
@@ -171,7 +156,6 @@ public class KVService {
     }
 
     public boolean checkExistsKey(String key) {
-
         return kvRepository.existsByKey(key);
     }
 

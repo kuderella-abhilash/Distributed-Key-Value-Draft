@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7cb090b2-bbfc-457e-a15b-f12e5af4186b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/cluster-service/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/key_value-service/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/metrics-service/metrics-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/replication-service/replication-service/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api-gateway/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api-gateway/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/key_value-service/key_value-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/key_value-service/key_value-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ReplicationServiceApplication">
+  <component name="RunManager" selected="Spring Boot.kv-node-3">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.api_gateway.ApiGatewayApplication" />
@@ -121,13 +118,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KeyValueServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="key_value-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.key_value_service.KeyValueServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MetricsServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="metrics-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.metrics_service.MetricsServiceApplication" />
@@ -142,6 +132,70 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="kv-node-1" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <envs>
+        <env name="SERVER_PORT" value="8081" />
+        <env name="NODE_ID" value="node-1" />
+        <env name="DB_URL" value="jdbc:postgresql://localhost:5432/kv_db" />
+        <env name="DB_USER" value="postgres" />
+        <env name="DB_PASSWORD" value="postgres" />
+        <env name="REDIS_HOST" value="localhost" />
+        <env name="REDIS_PORT" value="6379" />
+        <env name="KAFKA_BOOTSTRAP_SERVERS" value="localhost:9092" />
+        <env name="KV_EVENTS_TOPIC" value="kv-events" />
+      </envs>
+      <module name="key_value-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.key_value_service.KeyValueServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kv-node-2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <envs>
+        <env name="DB_PASSWORD" value="postgres" />
+        <env name="DB_URL" value="jdbc:postgresql://localhost:5432/kv_db" />
+        <env name="DB_USER" value="postgres" />
+        <env name="KAFKA_BOOTSTRAP_SERVERS" value="localhost:9092" />
+        <env name="KV_EVENTS_TOPIC" value="kv-events" />
+        <env name="NODE_ID" value="node-2" />
+        <env name="REDIS_HOST" value="localhost" />
+        <env name="REDIS_PORT" value="6379" />
+        <env name="SERVER_PORT" value="8085" />
+      </envs>
+      <module name="key_value-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.key_value_service.KeyValueServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kv-node-3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <envs>
+        <env name="DB_PASSWORD" value="postgres" />
+        <env name="DB_URL" value="jdbc:postgresql://localhost:5432/kv_db" />
+        <env name="DB_USER" value="postgres" />
+        <env name="KAFKA_BOOTSTRAP_SERVERS" value="localhost:9092" />
+        <env name="KV_EVENTS_TOPIC" value="kv-events" />
+        <env name="NODE_ID" value="node-3" />
+        <env name="REDIS_HOST" value="localhost" />
+        <env name="REDIS_PORT" value="6379" />
+        <env name="SERVER_PORT" value="8086" />
+      </envs>
+      <module name="key_value-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.key_value_service.KeyValueServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ClusterServiceApplication" />
+      <item itemvalue="Spring Boot.EurekaServiceApplication" />
+      <item itemvalue="Spring Boot.kv-node-1" />
+      <item itemvalue="Spring Boot.kv-node-2" />
+      <item itemvalue="Spring Boot.kv-node-3" />
+      <item itemvalue="Spring Boot.MetricsServiceApplication" />
+      <item itemvalue="Spring Boot.ReplicationServiceApplication" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -168,7 +222,7 @@
       <workItem from="1782363546814" duration="12744000" />
       <workItem from="1782386239599" duration="423000" />
       <workItem from="1782386713615" duration="7908000" />
-      <workItem from="1782449701244" duration="2241000" />
+      <workItem from="1782449701244" duration="5199000" />
     </task>
     <servers />
   </component>

@@ -26,21 +26,19 @@ public class KVController {
 
     private final KVService kvService;
 
-
     @PostMapping("/create")
     public ResponseEntity<KVResponse> createKeyValue(
             @Valid @RequestBody KVRequest request) {
-
-
 
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(kvService.createKeyValue(request));
     }
+
     @PutMapping("/{key}")
     public ResponseEntity<KVResponse> updateKeyValue(
-            @PathVariable String key,@Valid @RequestBody KVRequest kvRequest)
-    {
+            @PathVariable String key,@Valid @RequestBody KVRequest kvRequest) {
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(kvService.updateKeyValue(key, kvRequest));
@@ -83,8 +81,6 @@ public class KVController {
                         "exists",kvService.checkExistsKey(key)
                 )
         );
-
     }
-
 
 }
