@@ -20,7 +20,7 @@ public class ReplicationService {
     @Transactional
     public void applyEvent(KvEvent event) {
         switch (event.operation()) {
-            case PUT, UPDATE -> applyUpsert(event);
+            case PUT, CREATE, UPDATE -> applyUpsert(event);
             case DELETE -> applyDelete(event);
         }
     }

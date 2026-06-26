@@ -10,11 +10,13 @@ import com.dist.key_value_service.repository.KVRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -24,8 +26,11 @@ public class KVService {
     private final KVRepository kvRepository;
     private final CacheService cacheService;
 
+    @Value("${app.node-id:node-1}")
+    private String nodeId;
+
     public KVResponse createKeyValue(KVRequest request) {
-        log.info("Creating key {}", request.getKey());
+        log.info("Created key {}", request.getKey());
 
         if (kvRepository.existsByKey(request.getKey())) {
             throw new RuntimeException(
@@ -36,6 +41,7 @@ public class KVService {
         KV kv = KV.builder()
                 .key(request.getKey())
                 .value(request.getValue())
+                .nodeId(nodeId)
                 .build();
 
         KV saved = kvRepository.save(kv);
@@ -47,8 +53,18 @@ public class KVService {
                 response
         );
 
+//        eventProducer.publish(
+//                KVEvent.builder()
+//                        .operation("CREATE")
+//                        .key(saved.getKey())
+//                        .value(saved.getValue())
+//                        .version(saved.getVersion())
+//                        .nodeId(saved.getNodeId())
+//                        .build()
+//        );
         eventProducer.publish(
                 KVEvent.builder()
+                        .eventId(UUID.randomUUID())   // ← added this
                         .operation("CREATE")
                         .key(saved.getKey())
                         .value(saved.getValue())
@@ -86,7 +102,6 @@ public class KVService {
     public KVResponse updateKeyValue(
             String key,
             KVRequest request) {
-
         log.info("Updating key {}", key);
 
         KV kv = kvRepository.findByKey(key)
@@ -100,11 +115,8 @@ public class KVService {
                 kv.getVersion() + 1
         );
 
-        KV updated =
-                kvRepository.save(kv);
-
-        KVResponse response =
-                mapToResponse(updated);
+        KV updated = kvRepository.save(kv);
+        KVResponse response = mapToResponse(updated);
 
         cacheService.put(
                 updated.getKey(),
@@ -112,11 +124,13 @@ public class KVService {
         );
 
         eventProducer.publish(
-
                 KVEvent.builder()
+                        .eventId(UUID.randomUUID())   // ← added
                         .operation("UPDATE")
                         .key(updated.getKey())
                         .value(updated.getValue())
+                        .version(updated.getVersion())   // ← added
+                        .nodeId(nodeId)                  // ← added
                         .build()
         );
         return response;
@@ -124,29 +138,27 @@ public class KVService {
 
     @Transactional
     public void deleteByKey(String key) {
-
         log.info("Deleting key {}", key);
 
-        KV kv =
-                kvRepository.findByKey(key)
+        KV kv = kvRepository.findByKey(key)
                         .orElseThrow(() -> new RuntimeException("Key Not Found"));
 
         eventProducer.publish(
-
                 KVEvent.builder()
+                        .eventId(UUID.randomUUID())   // ← added
                         .operation("DELETE")
                         .key(key)
                         .value(null)
+                        .version(kv.getVersion())     // ← added
+                        .nodeId(nodeId)               // ← added
                         .build()
         );
         cacheService.evict(key);
-
         kvRepository.deleteByKey(key);
     }
 
     public List<KVResponse> getAllKeyValues(
             Pageable pageable) {
-
         log.info("Getting all keys");
 
         return kvRepository.findAll(pageable)
@@ -160,7 +172,6 @@ public class KVService {
     }
 
     private KVResponse mapToResponse(KV kv) {
-
         return KVResponse.builder()
                 .key(kv.getKey())
                 .value(kv.getValue())

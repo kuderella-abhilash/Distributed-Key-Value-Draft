@@ -21,9 +21,8 @@ import java.util.Map;
 @RestController
 
 @RequiredArgsConstructor
-@RequestMapping("/api")
+@RequestMapping("/api/v1/keys")
 public class KVController {
-
     private final KVService kvService;
 
     @PostMapping("/create")
@@ -45,25 +44,23 @@ public class KVController {
     }
 
     @GetMapping("/{key}")
-    public ResponseEntity<KVResponse> getKeyValue(
-            @PathVariable String key) {
-
+    public ResponseEntity<KVResponse> getKeyValue(@PathVariable String key) {
         return ResponseEntity.ok(
-                kvService.getKeyValue(key));
+                kvService.getKeyValue(key)
+        );
     }
 
     @DeleteMapping("/delete/{key}")
-        public ResponseEntity<String> deleteByKey(
-                @PathVariable String key){
-
+        public ResponseEntity<String> deleteByKey(@PathVariable String key){
         kvService.deleteByKey(key);
         return ResponseEntity.ok().body("Key Deleted");
-
     }
+
     @GetMapping
     public ResponseEntity<List<KVResponse>> getAllKeyValue(
             @RequestParam(defaultValue = "0")int page,
             @RequestParam(defaultValue = "10")int pageSize){
+
         return ResponseEntity.ok(
                 kvService.getAllKeyValues(
                         PageRequest.of(page,pageSize)
@@ -82,5 +79,4 @@ public class KVController {
                 )
         );
     }
-
 }
