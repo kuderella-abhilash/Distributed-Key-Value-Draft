@@ -14,5 +14,5 @@ public record KvEvent(
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSS")
         LocalDateTime timestamp
 ) {
-    public enum EventOperation { PUT, UPDATE, DELETE }
+    public enum EventOperation { CREATE,PUT, UPDATE, DELETE }
 }
