@@ -1,7 +1,5 @@
 package com.dist.key_value_service.repository;
 
-
-import com.dist.key_value_service.dto.KVResponse;
 import com.dist.key_value_service.entity.KV;
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -11,7 +11,6 @@ import java.util.UUID;
 @Table(name = "key_value", indexes = @Index(name = "idx_kv_key", columnList = "kv_key", unique = true))
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder @ToString
 public class KV {
-
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "id", updatable = false, nullable = false)

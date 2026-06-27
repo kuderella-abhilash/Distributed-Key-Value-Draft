@@ -10,14 +10,12 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Slf4j
 public class KVEventProducer {
-
     private final KafkaTemplate<String, KVEvent> kafkaTemplate;
 
     @Value("${app.kafka.topic}")
     private String topic;
 
     public void publish(KVEvent event) {
-
         log.info("Publishing Event -> Operation: {}, Key: {}",
                 event.getOperation(),
                 event.getKey());
@@ -27,7 +25,6 @@ public class KVEventProducer {
                 event.getKey(),
                 event
         );
-
         log.info("Event Published Successfully");
     }
 }
