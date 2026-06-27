@@ -9,6 +9,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@ToString
+@Setter
 public class KVEvent {
     private UUID eventId;
     private String operation;
