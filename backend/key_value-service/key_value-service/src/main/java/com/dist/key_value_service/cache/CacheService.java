@@ -1,7 +1,6 @@
 package com.dist.key_value_service.cache;
 
 import com.dist.key_value_service.dto.KVResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
