@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
-@EnableScheduling
 @SpringBootApplication
+@EnableScheduling
 public class ClusterServiceApplication {
 
 	public static void main(String[] args) {

@@ -4,10 +4,6 @@ import lombok.Data;
 
 @Data
 public class Node {
-
     private String key;
     private String nodeId;
-
-
-
 }
