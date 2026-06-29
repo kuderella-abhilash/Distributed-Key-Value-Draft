@@ -17,7 +17,6 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequiredArgsConstructor
 @Slf4j
 public class ClusterService {
-
     private final RedisTemplate<String, String> stringRedisTemplate;
     private final ClusterEventProducer eventProducer;
 
