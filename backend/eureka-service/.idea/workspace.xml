@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6077b9dd-15d0-4b2a-9768-94624c81a152" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../api-gateway/api-gateway/src/main/java/com/dist/api_gateway/controller/DashboardStatsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cluster-service/cluster-service/src/main/java/com/dist/cluster_service/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eureka-service/src/main/java/com/dist/eureka_service/Config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../key_value-service/key_value-service/src/main/java/com/dist/key_value_service/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../metrics-service/metrics-service/src/main/java/com/dist/metrics_service/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../replication-service/replication-service/src/main/java/com/dist/replication_service/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-gateway/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../api-gateway/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../key_value-service/key_value-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../key_value-service/key_value-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/ClusterCanvas.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/ClusterCanvas.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/Topbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/components/UI.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/components/UI.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/data/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/data/seed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/hooks/useCluster.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/hooks/useClusterStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/hooks/useClusterStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/AuditLog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/AuditLog.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/Cluster.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/Cluster.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/KafkaEvents.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/KafkaEvents.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/KeyBrowser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/KeyBrowser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/src/pages/Metrics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/src/pages/Metrics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../frontend/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kuderella-abhilash&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Abhi69-maker/Distributed-Key-Value-Draft.git&quot;,
+    &quot;accountId&quot;: &quot;60f77869-b6df-4241-8526-d15aede2be61&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FnajYR8WtfXaAaTi8IKhi087lD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.EurekaServiceApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "feature/frontend",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="EurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eureka-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.dist.eureka_service.EurekaServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6077b9dd-15d0-4b2a-9768-94624c81a152" name="Changes" comment="" />
+      <created>1782713423331</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782713423331</updated>
+      <workItem from="1782713424574" duration="2593000" />
+      <workItem from="1782801142632" duration="4738000" />
+      <workItem from="1782871237920" duration="1289000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
